@@ -92,6 +92,16 @@ p {
   object-fit: cover;
 }
 
+/* Fade transition for carousel */
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity .6s ease-in-out;
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -109,17 +119,33 @@ p {
     );
 }
 
+.hero-card {
+  color: var(--white);
+  max-width: 600px;
+}
+
+.hero-card h1 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.hero-card p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
   z-index: 5;
+  width: 50px;
+  opacity: 0.7;
+  transition: opacity .3s ease;
 }
 
-.carousel-item img {
-  transition: transform 8s ease;
-}
-
-.carousel-item.active img {
-  transform: scale(1.05);
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
 }
 
 .eyebrow {
@@ -229,6 +255,10 @@ p {
   }
   
   #heroCarousel {
+    height: 440px;
+  }
+
+  #heroCarousel img {
     height: 440px;
   }
   
