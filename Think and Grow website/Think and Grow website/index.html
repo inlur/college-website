@@ -29,12 +29,36 @@
   </nav>
 
   <main>
-    <section class="hero d-flex align-items-center">
-      <div class="container">
-        <div class="hero-card">
-          <h1>Think smarter about climate change</h1>
-          <p>Explore the causes, understand the impact and discover how small actions can lead to positive change.</p>
-          <a href="pages/actions.html" class="btn btn-success">Take action</a>
+    <section class="hero">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/climate-hero.webp" class="d-block w-100" alt="Young green plant growing in a healthy natural environment">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/climate2.png" class="d-block w-100" alt="Climate change illustration">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/nature.jpg" class="d-block w-100" alt="Beautiful nature landscape">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/nature2.jpg" class="d-block w-100" alt="Natural environment">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous slide">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next slide">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="hero-overlay">
+        <div class="container">
+          <div class="hero-card">
+            <h1>Think smarter about climate change</h1>
+            <p>Explore the causes, understand the impact and discover how small actions can lead to positive change.</p>
+            <a href="pages/actions.html" class="btn btn-success">Take action</a>
+          </div>
         </div>
       </div>
     </section>
