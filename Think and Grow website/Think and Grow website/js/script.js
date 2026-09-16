@@ -7,14 +7,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const heroCarousel =
       new bootstrap.Carousel(heroCarouselElement, {
-        interval: 5000,
-        wrap: true
+        interval: 4000,
+        wrap: true,
+        touch: true
       });
 
+    // Click anywhere on carousel to go to next image
     heroCarouselElement.addEventListener(
       'click',
-      () => heroCarousel.next()
+      (e) => {
+        // Don't trigger next if clicking carousel controls
+        if (!e.target.closest('.carousel-control-prev, .carousel-control-next')) {
+          heroCarousel.next();
+        }
+      }
     );
+
+    // Add keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        heroCarousel.prev();
+      } else if (e.key === 'ArrowRight') {
+        heroCarousel.next();
+      }
+    });
   }
 
   const form = document.querySelector('#pledgeForm');
